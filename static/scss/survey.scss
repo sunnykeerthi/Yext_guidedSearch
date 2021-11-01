@@ -1,0 +1,392 @@
+.u-hidden {
+    display: none !important;
+  }
+  
+  .YxtPage-wrapper.survey {
+    .yxt-SearchBar {
+      margin-top: 50px;
+    }
+  
+    .YxtPage-content {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    margin-top: 45px;
+  
+    @include bpgte(sm) {
+      margin-top: 150px;
+    }
+  }
+  
+  @mixin hover-shadow() {
+    &:hover {
+      box-shadow: var(--yxt-survey-box-shadow);
+      top: -1px;
+    }
+  }
+  
+  @mixin btn() {
+    padding: 8px;
+    background-color: var(--yxt-survey-color-primary);
+    color: var(--yxt-survey-color-button-text);
+    border-radius: 4px;
+  
+    @include hover-shadow;
+  }
+  
+  .Survey {
+    display:  flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: 60px;
+  
+    @include bpgte(sm) {
+      width: 695px;
+      margin-top: 10px;
+    }
+  
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &-description {
+      margin-bottom: 30px;
+    }
+  
+    &-angle {
+      display: inline-block;
+      margin-left: 3px;
+      background-repeat: no-repeat;
+      height: 10px;
+      width: 10px;
+    }
+  
+    &-progress {
+      width: 100%;
+      height: 5px;
+      background-color: var( --yxt-survey-color-progress-bar-empty);
+      margin-bottom: 80px;
+    }
+  
+    &-progressFill {
+      height: 100%;
+      background-color: var(--yxt-survey-color-progress-bar-full);
+      transition: width 0.5s ease;
+    }
+  
+    &-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &-question {
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    &-navBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    &-left,
+    &-right {
+      height: 26px;
+      width: 26px;
+      background-size: 15px 20px;
+      border-radius: 50%;
+      background-color: var(--yxt-survey-color-primary);
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      transition: top 0.3 ease;
+  
+      @include hover-shadow;
+  
+      @include bpgte(sm) {
+        height: 52px;
+        width: 52px;
+        background-size: auto;
+      }
+    }
+  
+    &-skip {
+      text-transform: uppercase;
+      font-size: var(--yxt-font-size-md);
+      font-weight: var(--yxt-font-weight-bold);
+      color: var(--yxt-survey-color-skip-text);
+    }
+  
+    &-submit {
+      @include btn;
+    }
+  
+    .Question {
+      margin-bottom: 20px;
+  
+      // wacky to override built in styling
+      .mapboxgl-ctrl-geocoder
+      {
+        @include bplte(xs) {
+          width: 100%;
+          max-width: none;
+        }
+  
+        @include bpgte(sm) {
+          width: 100%;
+          max-width: none;
+        }
+      }
+  
+      &-geolocateWrapper {
+        display: flex;
+        align-items: center;
+  
+        div {
+          flex-grow: 1;
+          margin-right: 8px;
+        }
+  
+        button.geo {
+          @include btn;
+  
+          background-position: center;
+          background-size: 25px;
+          background-repeat: no-repeat;
+          height: 36px;
+          width: 36px;
+        }
+      }
+  
+      &-prompt
+      {
+        font-size: 24px;
+        margin-bottom: 40px;
+      }
+  
+      &-title {
+        font-weight: var(--yxt-font-weight-bold);
+      }
+  
+      &-instructions
+      {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+  
+      &-input {
+        width: 100%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        border-radius: 4px;
+        border: none;
+  
+        @include bpgte(sm) {
+          width: 460px;
+        }
+      }
+  
+      &-options {
+        display: grid;
+        grid-auto-rows: 1fr;
+        column-gap: 2px;
+        row-gap: 4px;
+      }
+  
+      &-option {
+        display: flex;
+        flex-direction: column;
+        border-radius: 4px;
+        background-color: white;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: 2px;
+        margin-right: 2px;
+        position: relative;
+        top: 0px;
+        transition: top 0.3s ease;
+  
+        @include hover-shadow;
+      }
+  
+      &-optionImg {
+        object-fit: cover;
+        width: 220px;
+      }
+  
+      &-optionImgWrapper {
+        height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+  
+      &-optionLabel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        padding-right: 16px;
+        width: 100%;
+      }
+  
+      &-option--detailed {
+        padding: 16px;
+      }
+  
+      &-selectedCircle {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        border: 1px solid #d3d3d3;
+        background-position: center;
+        background-repeat: no-repeat;
+  
+        &.is-selected {
+          background-color: var(--yxt-survey-color-primary);
+          border: 1px solid var(--yxt-survey-color-primary);
+        }
+      }
+  
+      &-optionHeading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+      &-optionDivider {
+        color: var(--yxt-survey-color-primary);
+        margin-top: 12px;
+        margin-bottom: 12px;
+        width: 100%;
+      }
+  
+      &-optionDetails {
+        text-align: left;
+      }
+  
+      &-option.is-selected {
+        background-color: var(--yxt-survey-color-primary);
+        color: white;
+      }
+    }
+  }
+  
+  .Landing {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    margin-top: 60px;
+  
+    @include bpgte(sm) {
+      margin-top: 100px;
+      width: 725px;
+    }
+  
+    &-divider {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+  
+    &-links {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+  
+      @include bpgte(sm) {
+        flex-direction: row;
+      }
+    }
+  
+    &-link {
+      @include btn;
+  
+      text-transform: uppercase;
+      font-weight: var(--yxt-font-weight-bold);
+      width: 100%;
+      text-align: center;
+  
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+  
+      @include bpgte(sm) {
+        width: auto;
+        text-align: left;
+  
+        &:not(:last-child) {
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  
+    &-core {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+  
+      @include bpgte(sm) {
+        flex-direction: row;
+      }
+    }
+  
+    &-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      @include bplte(xs) {
+        text-align: center;
+      }
+  
+      @include bpgte(sm) {
+        align-items: flex-start;
+        margin-right: 20px;
+      }
+    }
+  
+    &-title {
+      font-size: 28px;
+      font-weight: var(--yxt-font-weight-bold);
+      margin-bottom: 30px;
+  
+      @include bpgte(sm) {
+        font-size: 36px;
+      }
+    }
+  
+    &-img {
+      height: 151px;
+      width: 151px;
+      margin-bottom: 30px;
+  
+      @include bpgte(sm) {
+        height: 277px;
+        width: 277px;
+      }
+    }
+  }

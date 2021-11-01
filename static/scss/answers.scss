@@ -1,0 +1,16 @@
+@import "survey.scss";
+
+.Answers
+{
+    //Insert answers styling here
+}
+
+
+.Survey .Question-option.is-selected {
+    background-color: lightgrey; // Clicked element background color
+}
+
+.Overlay
+{
+  // Insert Overlay styling here
+}

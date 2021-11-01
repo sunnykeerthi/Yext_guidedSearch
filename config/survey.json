@@ -1,0 +1,59 @@
+{
+    "verticalKey": "survey",
+    "pageTitle": "Survey",
+    "survey": {
+      // queryBase is text that should always appear in the search
+      "queryBase": "Tyres",
+      // vertical is the url that the search should be done on
+      "vertical": "products.html",
+      // questions is the list of questions to include in the survey.
+      // Each question can have 4 properties
+      // 1. 'question' is the prompt the use will see
+      // 2. type is what type of input should be used: text, radio, or checkbox
+      // 3. options are required for radio or checkbox inputs
+      // 4. format described how the answer will be incorporated into the final query that's constructed
+      //    the answers that the user provides will be substituted for the %s in the format string
+      //    and then that string will be appended to the existing query
+      "questions": [{
+        "question": "Question 1",
+        "options": [
+          {
+            "text":  "Option 1",
+            "image": "/static/assets/images/img.png"
+          },
+          {
+            "text":  "Option 2",
+            "image": "/static/assets/images/img.png"
+          },
+          {
+            "text":  "Option 3",
+            "image": "/static/assets/images/img.png"
+          }
+        ],
+        "columns": 3,
+        "type": "radio",
+        "format": "used for %s"
+      },
+      {
+        "question": "What is your drive type?",
+        "options": [
+          {
+            "text":  "Option 1",
+            "image": "/static/assets/images/img.png"
+          },
+          {
+            "text":  "Option 2",
+            "image": "/static/assets/images/img.png"
+          },
+          {
+            "text":  "Option 3",
+            "image": "/static/assets/images/img.png"
+          }
+        ],
+        "columns": 3,
+        "type": "radio",
+        "format": "and good for %s"
+      }]
+    },
+    "verticalsToConfig": {}
+  }

@@ -1,0 +1,52 @@
+{{#> layouts/html pageWrapperCss="survey"}}
+<script id="survey-config" data-data='{{{json survey}}}'></script>
+<div class="Survey-wrapper">
+    <div class="search_form"></div>
+    <div class="js-surveyWrapper">
+        <div class="js-survey"></div>
+    </div>
+    <div class="Footer">
+        <img src="/static/assets/images/yext-logo.svg" alt="">
+    </div>
+</div>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css" rel="stylesheet">
+<link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://assets.sitescdn.net/answers-search-bar/v1.0/answers.css" />
+
+<script>
+    { {#babel } }
+    mapboxgl.accessToken = 'pk.eyJ1IjoieWV4dCIsImEiOiJqNzVybUhnIn0.hTOO5A1yqfpN42-_z_GuLw';
+    {
+        {
+            /babel}}
+</script>
+<script src="/survey.js"></script>
+
+<script src="https://assets.sitescdn.net/answers-search-bar/v1.0/answerstemplates.compiled.min.js"></script>
+<script>
+        function initAnswers() {
+            ANSWERS.init({
+                apiKey: "{{global_config.apiKey}}",
+                experienceKey: "{{global_config.experienceKey}}",
+                experienceVersion: "PRODUCTION",
+                locale: "en", // e.g. en
+                businessId: "{{global_config.businessId}}",
+                templateBundle: TemplateBundle.default,
+                onReady: function () {
+                    ANSWERS.addComponent("SearchBar", {
+                        container: ".search_form",
+                        name: "search-bar", //Must be unique for every search bar on the same page
+                        redirectUrl: "{{survey.vertical}}",
+                        placeholderText: "Search...",
+                    });
+                },
+            });
+        }
+</script>
+<script src="https://assets.sitescdn.net/answers-search-bar/v1.0/answers.min.js" onload="ANSWERS.domReady(initAnswers)"
+    async defer></script>
+{{/layouts/html }}
