@@ -10,6 +10,21 @@
     background-color: lightgrey; // Clicked element background color
 }
 
+
+.yxt-SearchBar-AnimatedIcon.yxt-SearchBar-AnimatedIcon--paused.js-yxt-AnimatedForward.component.yxt-Answers-component {
+  display: none !important;
+} 
+
+.yxt-SearchBar-AnimatedIcon.js-yxt-AnimatedForward.component.yxt-Answers-component.yxt-SearchBar-AnimatedIcon--inactive,
+.yxt-SearchBar-AnimatedIcon.js-yxt-AnimatedReverse.component.yxt-Answers-component.yxt-SearchBar-AnimatedIcon--inactive{
+  display: none !important;
+}
+
+.yxt-SearchBar-AnimatedIcon.yxt-SearchBar-AnimatedIcon--paused.js-yxt-AnimatedReverse.yxt-SearchBar-AnimatedIcon--inactive.component.yxt-Answers-component
+{
+    display: flex !important; 
+}
+
 .Overlay
 {
   // Insert Overlay styling here
