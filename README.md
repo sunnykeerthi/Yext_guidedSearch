@@ -52,6 +52,26 @@ The package is made with the exact folder structure (that are only required) as 
     display: flex !important; 
 }
 ```
+
+###
+
+Add the below stylings to the `snswer-variables.scss` inside `:root`
+```
+  // Survey styling variables
+  // this color is used for buttons, and other highlights throughout the survey
+  --yxt-survey-color-primary: var(--yxt-color-brand-primary);
+  // this color is used for text on buttons
+  --yxt-survey-color-button-text: white;
+  // this color is used for the 'skip question' text link
+  --yxt-survey-color-skip-text: black;
+  // these two colors power the progress bar colors
+  --yxt-survey-color-progress-bar-empty: #d3d3d3;
+  --yxt-survey-color-progress-bar-full: var(--yxt-color-brand-primary);
+  // this property is used for box shadows on buttons and options
+  --yxt-survey-box-shadow: 0px 8px 23px 0px rgba(0,0,0,0.66);
+  ```
+  
+
 ### global-config.js
 From your answers experience update
 - apiKey - append your key to `sandbox-`
