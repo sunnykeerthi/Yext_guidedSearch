@@ -7,6 +7,9 @@
 
 The package is made with the exact folder structure (that are only required) as that of sites.
 
+Download the repo into you local by clicking `Download as zip` under `Code` button
+
+![Download](https://i.imgur.com/8jUOKy2.png)
 ## Step 1 - Create Folders
 
 - Under Static -> js -> Create a folder named `survey`.
