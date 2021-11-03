@@ -53,9 +53,9 @@ The package is made with the exact folder structure (that are only required) as 
 }
 ```
 
-###
+### answer-variables.scss
 
-Add the below stylings to the `snswer-variables.scss` inside `:root`
+Add the below stylings to the `answer-variables.scss` inside `:root`
 ```
   // Survey styling variables
   // this color is used for buttons, and other highlights throughout the survey
