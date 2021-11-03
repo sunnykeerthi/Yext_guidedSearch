@@ -1,9 +1,9 @@
-# What is guided search
+## What is Guided Search
 
 ### It is a way of providing personalized answers to users based on a set of questions.
 
 
-# How to use
+## How to use
 
 The package is made with the exact folder structure (that are only required) as that of sites.
 
