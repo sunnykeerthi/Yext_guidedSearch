@@ -78,4 +78,18 @@ From your answers experience update
 - businessId
 - experienceKey
 
+### config/landing.json
+
+- Replace `title`, `subtitle`, `image` and `text` with contents of your choice. 
+- In the repo, `image` is commented. If needed un-comment this piece (Line 10).
+
+### config/survey.json
+
+- Replace the default `Question *` and `Option *` placeholders with the action questions and options.
+- Replace `/static/assets/images/img.png` with the Image that will be used.
+- Replace `vertical` value with the page where the user should be navigated at the end of survey.
+- Replace `queryBase` with a initial term used to start the query.
+- Replace `format` with the intented Query format.
+
+
 Commit - Restart Live preview.

@@ -3,14 +3,14 @@
     "pageTitle": "Landing",
     "landing": {
         // title is the bold text that appears on the survey landing page
-        "title": "No matter where you live throughout the South, Southern Tire Mart should be your one-stop shop when considering auto repairs or new tires and wheels.",
+        "title": "Your Title",
         // subtitle is the text that appears on the survey landing page under the title
-        "subtitle": "Come into any Southern Tire Mart location for a quote on an automotive repair service, or simply schedule your next service appointment online today.",
+        "subtitle": "Your subtitle",
         // image is the url for an image that appears on the survey landing page
         // "image": "/static/assets/images/landing.png",
         "links": [
           {
-            "text": "find your perfect Tire",
+            "text": "find your perfect Tire", //button text
             "url": "/survey.html"
           }
         ]
