@@ -1,15 +1,15 @@
 {
-    "sdkVersion": "1.11", // The version of the Answers SDK to use
+    "sdkVersion": "1.11",  // Leave it as default
     "apiKey": "sandbox-", // The answers api key found on the experiences page. This will be provided automatically by the Yext CI system
-    // "experienceVersion": "<REPLACE ME>", // the Answers Experience version to use for API requests. This will be provided automatically by the Yext CI system
-    "businessId": "", // The business ID of the account. This will be provided automatically by the Yext CI system
-    "experienceKey": "",
-    "sessionTrackingEnabled": true, // Whether or not session tracking is enabled for all pages
-    "analyticsEventsEnabled": true, // Whether or not to submit user interaction analytics events
-    "logo": "", // The link to the logo for open graph meta tag - og:image.
+    "experienceVersion": "<REPLACE ME>",  //STAGING or PRODUCTION
+    "businessId": "",  // Fill in the business ID
+    "experienceKey": "", // Fill in this
+    "sessionTrackingEnabled": true,  
+    "analyticsEventsEnabled": true, 
+    "logo": "",  
     "favicon": "",
-    "googleTagManagerName": "dataLayer", // The name of your Google Tag Manager data layer
-    "googleTagManagerId": "", // The container id associated with your Google Tag Manager container
-    "googleAnalyticsId": "", // The tracking Id associated with your Google Analytics account
-    "conversionTrackingEnabled": true // Whether or not conversion tracking is enabled for all pages
-  }
+    "googleTagManagerName": "dataLayer",  
+    "googleTagManagerId": "", 
+    "googleAnalyticsId": "",  
+    "conversionTrackingEnabled": true 
+   }
