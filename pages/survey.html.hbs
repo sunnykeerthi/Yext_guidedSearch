@@ -18,11 +18,9 @@
 <link rel="stylesheet" type="text/css" href="https://assets.sitescdn.net/answers-search-bar/v1.0/answers.css" />
 
 <script>
-    { {#babel } }
+    {{#babel}}
     mapboxgl.accessToken = 'pk.eyJ1IjoieWV4dCIsImEiOiJqNzVybUhnIn0.hTOO5A1yqfpN42-_z_GuLw';
-    {
-        {
-            /babel}}
+    {{/babel}}
 </script>
 <script src="/survey.js"></script>
 
@@ -32,7 +30,7 @@
             ANSWERS.init({
                 apiKey: "{{global_config.apiKey}}",
                 experienceKey: "{{global_config.experienceKey}}",
-                experienceVersion: "PRODUCTION",
+                experienceVersion: "{{global_config.experienceVersion}}",
                 locale: "en", // e.g. en
                 businessId: "{{global_config.businessId}}",
                 templateBundle: TemplateBundle.default,
