@@ -58,9 +58,9 @@
       "merge-options": "^2.0.0",
       "object-fit-images": "^3.2.4",
       "remove-files-webpack-plugin": "^1.4.3",
+      "underscore.string": "3.3.5",
       "ramda": "^0.27.1",
       "snabbdom": "^3.0.1",
-      "underscore.string": "3.3.5",
       "union-type": "^0.4.1",
       "flyd": "^0.2.8"
     },
