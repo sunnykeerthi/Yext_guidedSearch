@@ -27,12 +27,17 @@
 <script src="https://assets.sitescdn.net/answers-search-bar/v1.0/answerstemplates.compiled.min.js"></script>
 <script>
         function initAnswers() {
+            const apiKey = "{{global_config.apiKey}}";
+            const experienceKey = "{{global_config.experienceKey}}";
+            const experienceVersion= "{{global_config.experienceVersion}}";
+            const locale = "en";
+            const businessId = "{{global_config.businessId}}"; 
             ANSWERS.init({
-                apiKey: "{{global_config.apiKey}}",
-                experienceKey: "{{global_config.experienceKey}}",
-                experienceVersion: "{{global_config.experienceVersion}}",
-                locale: "en", // e.g. en
-                businessId: "{{global_config.businessId}}",
+                apiKey: apiKey,
+                experienceKey: experienceKey,
+                experienceVersion: experienceVersion,
+                locale: locale,
+                businessId: businessId,
                 templateBundle: TemplateBundle.default,
                 onReady: function () {
                     ANSWERS.addComponent("SearchBar", {
@@ -41,6 +46,40 @@
                         redirectUrl: "{{survey.vertical}}",
                         placeholderText: "Search...",
                     });
+                    
+              // Uncomment below block for typed animation 
+              /*
+                let url = apiKey.includes('sandbox') ? 'https://liveapi-sandbox.yext.com/v2/accounts/me/answers/autocomplete' : 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete';
+                url += '?v=20190101';
+                url += '&api_key=' + apiKey.replace('sandbox-', '');
+                url += '&sessionTrackingEnabled=false';
+                url += '&experienceKey=' + experienceKey;
+                url += '&input=';
+                url += '&version=' + experienceVersion;
+                url += '&locale=' + locale;
+
+                fetch(url)
+                    .then(r => r.json())
+                    .then((response) => {
+                        // Get strings from response
+                        const strings = response.response.results.map(r => r.value);
+
+                        // Set up Typed
+                        var options = {
+                            strings: strings,
+                            showCursor: true,
+                            cursorChar: "|",
+                            typeSpeed: 45,
+                            backSpeed: 20,
+                            smartBackspace: true,
+                            loop: true,
+                            startDelay: 500,
+                            backDelay: 2000,
+                            attr: "placeholder",
+                        };
+
+                        new Typed(".js-yext-query", options);
+                    }); */
                 },
             });
         }
