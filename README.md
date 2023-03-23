@@ -14,7 +14,7 @@ The package is made with the exact folder structure (that are only required) as 
 
 ## Step 1 - Update package.json.
 
-- replace package.json on sites with package.json file. Commit and restart.
+- replace `package.json` on sites with `package.json` file. Commit and restart.
 
 
 ## Step 2 - Create Folders
