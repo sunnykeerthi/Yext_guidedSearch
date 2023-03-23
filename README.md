@@ -11,11 +11,17 @@ The package is made with the exact folder structure (that are only required) as 
 - Unzip the folder. and proceed
 
 ![Download](https://i.imgur.com/8jUOKy2.png)
-## Step 1 - Create Folders
+
+## Step 1 - Update package.json.
+
+- replace package.json on sites with package.json file. Commit and restart.
+
+
+## Step 2 - Create Folders
 
 - Under Static -> js -> Create a folder named `survey`.
 
-## Step 2 - Uploading files.
+## Step 3 - Uploading files.
 
 - Upload `landing.json` and `survey.json` from `config` to site's `config` folder.
 - Upload `landing.html.hbs` and `survey.html.hjbs` from `pages` to site's `pages` folder.
@@ -23,7 +29,7 @@ The package is made with the exact folder structure (that are only required) as 
 - Upload all the files from `static -> js -> survey` to  site's `static -> js -> survey` folder. (Folder created in Step 1)
 - Upload `survey.scss` from `static -> scss` to `static -> scss` folder in sites.
 
-## Step 3 - Replace entire content.
+## Step 4 - Replace entire content.
 
 - `config -> global_config.json` on sites with `config -> global_config.json` file.
 - `themes -> answers-hitchhiker-theme -> static -> webpack -> webpack.prod.js` on sites with `themes -> answers-hitchhiker-theme -> static -> webpack -> webpack.prod.js` file.
@@ -31,7 +37,7 @@ The package is made with the exact folder structure (that are only required) as 
 - `webpack-config.js` on sites with `webpack-config.js` file.
 
 
-## Step 4 - Update contents. (please take a look at relevant file in repo for reference)
+## Step 5 - Update contents. (please take a look at relevant file in repo for reference)
 
 ### answers.scss
 - Add `@import "survey.scss";` as the first line to `answers.scss`.
