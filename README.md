@@ -33,7 +33,6 @@ The package is made with the exact folder structure (that are only required) as 
 
 - `config -> global_config.json` on sites with `config -> global_config.json` file.
 - `themes -> answers-hitchhiker-theme -> static -> webpack -> webpack.prod.js` on sites with `themes -> answers-hitchhiker-theme -> static -> webpack -> webpack.prod.js` file.
-- `package.json` on sites with `package.json` file.
 - `webpack-config.js` on sites with `webpack-config.js` file.
 
 
